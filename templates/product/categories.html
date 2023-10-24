@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}categories{% endblock title %}
+{% block content %}
+
+
+<div class="dropdown-center">
+    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      product categories
+    </button>
+    <ul class="dropdown-menu">
+      {% for categories in object_list %}
+      <li><a class="dropdown-item" href="#">{{categories.category_name}}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+
+{% endblock content %}

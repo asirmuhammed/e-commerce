@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}subcategories{% endblock title %}
+{% block content %}
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>categories</th>
+            <th>subcategories</th>
+        </tr>
+    {% for subcategories in object_list %}
+      <tr>
+        
+        <th scope="col">{{  subcategories.Category  }}</th>
+        <th scope="col">{{ subcategories.subcategoty_name }}</th>
+        
+        
+      </tr>
+    {% endfor %}
+    
+    </tbody>
+  </table>
+
+
+
+
+{% endblock content %}
